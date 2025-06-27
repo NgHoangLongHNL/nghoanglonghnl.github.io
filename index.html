@@ -28,10 +28,13 @@
       background: #1e1e1e;
       border-radius: 10px;
       width: 90%;
+      height: 90vh; /* Ông yêu cầu đây! */
       max-width: 700px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       overflow: hidden;
       font-family: monospace;
+      display: flex;
+      flex-direction: column;
       animation: flicker 1.5s infinite alternate;
     }
 
@@ -39,8 +42,21 @@
       background: #2c2c2c;
       padding: 8px 12px;
       display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-left {
+      display: flex;
       gap: 8px;
       align-items: center;
+    }
+
+    .terminal-title {
+      flex: 1;
+      text-align: center;
+      color: #ccc;
+      font-size: 14px;
     }
 
     .terminal-header .btn {
@@ -60,6 +76,8 @@
       font-size: 16px;
       line-height: 1.6;
       background: rgba(0,0,0,0.75);
+      flex: 1;
+      overflow-y: auto;
     }
 
     @keyframes flicker {
@@ -91,14 +109,17 @@
 <body>
   <div class="terminal-box">
     <div class="terminal-header">
-      <span class="btn red"></span>
-      <span class="btn yellow"></span>
-      <span class="btn green"></span>
+      <div class="header-left">
+        <span class="btn red"></span>
+        <span class="btn yellow"></span>
+        <span class="btn green"></span>
+      </div>
+      <div class="terminal-title">Profile By Pham Kim Long</div>
     </div>
     <div class="terminal-content">
       <p><strong>Привет, я KLongPC</strong></p>
       <p>💻 Tool Dev | ImGui | C++ | Hook</p>
-      <p>🔐 Projects: FakeBank, FF Hack</p>
+      <p>🔐 Projects: FakeBank, FF Hackr</p>
       <p>📫 Telegram: @klongpc | Zalo: 09xxxxxxxx</p>
       <p>⚡ “Code is my weapon. Keyboard is my blade.”</p>
     </div>
