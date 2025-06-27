@@ -28,7 +28,7 @@
       background: #1e1e1e;
       border-radius: 10px;
       width: 90%;
-      height: 90vh; /* Ông yêu cầu đây! */
+      height: 90vh;
       max-width: 700px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       overflow: hidden;
@@ -80,6 +80,31 @@
       overflow-y: auto;
     }
 
+    .terminal-links {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-link {
+      padding: 8px 16px;
+      border: 2px dashed #00ff00;
+      background-color: transparent;
+      color: #00ff00;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-link:hover {
+      background-color: rgba(0, 255, 0, 0.1);
+      box-shadow: 0 0 10px #00ff00;
+      color: #000;
+      border-color: #00ff00;
+    }
+
     @keyframes flicker {
       from { opacity: 0.95; }
       to   { opacity: 1; }
@@ -116,12 +141,19 @@
       </div>
       <div class="terminal-title">Profile By Pham Kim Long</div>
     </div>
+
     <div class="terminal-content">
       <p><strong>Привет, я KLongPC</strong></p>
       <p>💻 Tool Dev | ImGui | C++ | Hook</p>
-      <p>🔐 Projects: FakeBank, FF Hackr</p>
+      <p>🔐 Projects: FakeBank, FF Hack</p>
       <p>📫 Telegram: @klongpc | Zalo: 09xxxxxxxx</p>
       <p>⚡ “Code is my weapon. Keyboard is my blade.”</p>
+
+      <div class="terminal-links">
+        <a class="btn-link" href="https://t.me/klongpc" target="_blank">Telegram</a>
+        <a class="btn-link" href="https://github.com/KLongPC" target="_blank">GitHub</a>
+        <a class="btn-link" href="/static/KLongPC_CV.pdf" target="_blank">Download CV</a>
+      </div>
     </div>
   </div>
 </body>
