@@ -54,8 +54,8 @@
   <script>
     function updateBackground() {
       const isPortrait = window.innerHeight > window.innerWidth;
-      const imgPortrait = "portrait.jpg"; // Ảnh dọc
-      const imgLandscape = "landscape.jpg"; // Ảnh ngang
+      const imgPortrait = "static/bgrd.jpg"; // Ảnh dọc
+      const imgLandscape = "static/bg.jpg"; // Ảnh ngang
 
       document.body.style.backgroundImage = `url(${isPortrait ? imgPortrait : imgLandscape})`;
     }
