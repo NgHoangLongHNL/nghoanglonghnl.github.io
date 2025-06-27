@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KLongPC | Hacker Profile</title>
+
   <style>
     * {
       margin: 0;
@@ -24,29 +25,52 @@
     }
 
     .terminal-box {
-      background: rgba(0, 0, 0, 0.75);
-      padding: 30px;
-      border: 2px solid #00ff00;
+      background: #1e1e1e;
       border-radius: 10px;
-      max-width: 90%;
-      width: 600px;
-      box-shadow: 0 0 20px #00ff00aa;
-      text-align: left;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      overflow: hidden;
+      font-family: monospace;
+      animation: flicker 1.5s infinite alternate;
     }
 
-    .terminal-box h1 {
-      font-size: 24px;
-      margin-bottom: 15px;
+    .terminal-header {
+      background: #2c2c2c;
+      padding: 8px 12px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
     }
 
-    .terminal-box p {
+    .terminal-header .btn {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .red { background-color: #ff5f56; }
+    .yellow { background-color: #ffbd2e; }
+    .green { background-color: #27c93f; }
+
+    .terminal-content {
+      padding: 20px;
+      color: #00ff00;
+      font-size: 16px;
       line-height: 1.6;
+      background: rgba(0,0,0,0.75);
+    }
+
+    @keyframes flicker {
+      from { opacity: 0.95; }
+      to   { opacity: 1; }
     }
 
     @media (max-width: 480px) {
-      .terminal-box {
-        padding: 20px;
+      .terminal-content {
         font-size: 14px;
+        padding: 15px;
       }
     }
   </style>
@@ -54,9 +78,8 @@
   <script>
     function updateBackground() {
       const isPortrait = window.innerHeight > window.innerWidth;
-      const imgPortrait = "static/bgrd.jpg"; // Ảnh dọc
-      const imgLandscape = "static/bg.png"; // Ảnh ngang
-
+      const imgPortrait = "static/bgrd.jpg";
+      const imgLandscape = "static/bg.png";
       document.body.style.backgroundImage = `url(${isPortrait ? imgPortrait : imgLandscape})`;
     }
 
@@ -64,13 +87,21 @@
     window.addEventListener('resize', updateBackground);
   </script>
 </head>
+
 <body>
   <div class="terminal-box">
-    <h1>Привет, я KLongPC</h1>
-    <p>💻 Reverse Engineer | Tool Dev | ImGui god</p>
-    <p>🧠 Project: Fake App Banking, FF Hack, Auto clicker</p>
-    <p>📫 Telegram: @klongpc | Zalo: 09xxxxxxxx</p>
-    <p>⚡ “Code is my weapon. Keyboard is my blade.”</p>
+    <div class="terminal-header">
+      <span class="btn red"></span>
+      <span class="btn yellow"></span>
+      <span class="btn green"></span>
+    </div>
+    <div class="terminal-content">
+      <p><strong>Привет, я KLongPC</strong></p>
+      <p>💻 Tool Dev | ImGui | C++ | Hook</p>
+      <p>🔐 Projects: FakeBank, FF Hack</p>
+      <p>📫 Telegram: @klongpc | Zalo: 09xxxxxxxx</p>
+      <p>⚡ “Code is my weapon. Keyboard is my blade.”</p>
+    </div>
   </div>
 </body>
 </html>
