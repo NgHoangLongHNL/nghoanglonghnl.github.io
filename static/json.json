@@ -3,7 +3,14 @@
     {
       "username": "admin",
       "password": "1",
-      "api_key": "12345-ABCDE"
+      "status": "notlocked",
+      "note": ""
+    },
+    {
+      "username": "test",
+      "password": "1",
+      "status": "locked",
+      "note": "User has been locked by admin"
     }
   ]
 }
